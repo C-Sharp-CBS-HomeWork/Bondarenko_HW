@@ -57,5 +57,21 @@ namespace Task_2
             }
             Console.ResetColor();
         }
+
+        public static EnumColor ColorParser(string color)
+        {
+            EnumColor rez = color switch
+            {
+                "Red" => EnumColor.Red,
+                "Blue" => EnumColor.Blue,
+                "BLack" => EnumColor.Black,
+                "White" => EnumColor.White,
+                "Yellow" => EnumColor.Yellow,
+                "Green" => EnumColor.Green,
+                "Gray" => EnumColor.Gray,
+                _ => EnumColor.White
+            };
+            return rez;
+        }
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Task_2
 {
-    enum EnumColor : int
+    enum EnumColor
     {
-        Green = 1,
-        Blue = 2,
-        Red = 3,
-        Yellow = 4,
-        Black = 5,
-        White = 6,
-        Gray = 7
+        Green,
+        Blue,
+        Red,
+        Yellow,
+        Black,
+        White,
+        Gray
     }
 }
