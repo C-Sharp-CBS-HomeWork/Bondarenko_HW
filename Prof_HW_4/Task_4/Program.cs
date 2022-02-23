@@ -11,7 +11,7 @@ namespace Task_4
     {
         static void Main()
         {
-            Encoding encoding = Encoding.Default;
+            Console.OutputEncoding = Encoding.Unicode;
             Local local = new Local(new FileInfo("Product.txt"));
 
             var my = CultureInfo.CurrentCulture;

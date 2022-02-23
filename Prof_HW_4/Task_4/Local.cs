@@ -55,14 +55,15 @@ namespace Task_4
         public string ToString(string? format, IFormatProvider? formatProvider)
         {
             StringBuilder SB = new StringBuilder();
-            if (format is null)
+            if (format is null || formatProvider is null)
                 return this.ToString();
             else
             {
+                RegionInfo region = new RegionInfo(formatProvider.ToString());
                 for (int i = 0; i < _nameOfProduct.Count; i++)
                 {
                     SB.Append(_nameOfProduct[i].ToString(formatProvider) + "\t");
-                    SB.Append(_cost[i].ToString(format, formatProvider) + RegionInfo.CurrentRegion.CurrencySymbol + "\t");
+                    SB.Append(_cost[i].ToString(format, formatProvider) + region.CurrencySymbol + "\t");
                     SB.Append(_dateOfBuying[i].ToString(formatProvider) + "\n");
                 }
                 return SB.ToString();
