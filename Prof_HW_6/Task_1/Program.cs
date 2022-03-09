@@ -15,6 +15,5 @@ namespace Task_1
 
             Reflector.GetInfo(assembly);
         }
-
     }
 }
