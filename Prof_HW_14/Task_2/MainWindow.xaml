@@ -1,0 +1,14 @@
+﻿<Window x:Class="Task_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btn_Connect" Content="Connect" HorizontalAlignment="Left" Height="60" Margin="140,288,0,0" VerticalAlignment="Top" Width="182" Click="btn_Connect_Click"/>
+        <Button x:Name="bnt_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="470,288,0,0" VerticalAlignment="Top" Width="182" Click="bnt_Cancel_Click"/>
+        <TextBox x:Name="tb_Rez" HorizontalAlignment="Left" Height="273" Margin="284,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+    </Grid>
+</Window>
