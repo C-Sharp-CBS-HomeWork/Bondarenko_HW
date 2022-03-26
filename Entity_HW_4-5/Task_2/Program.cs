@@ -7,7 +7,7 @@ namespace Task_2
 {
     public class Program
     {
-        public static void Main()
+        public async static Task Main()
         {
             using TestDBContext testDB = new TestDBContext();
 
@@ -25,6 +25,15 @@ namespace Task_2
 
             //testDB.SaveChanges();
 
+            Task.Run(async () =>
+            {
+                while (true)
+                {
+                    Console.Write("* ");
+                    await Task.Delay(100);
+                }        
+            });
+
             SqlParameter ID = new SqlParameter()
             {
                 ParameterName = "@paramID",
@@ -40,9 +49,8 @@ namespace Task_2
                 SqlDbType = SqlDbType.NVarChar,
                 Size = 40
             };
-            testDB.Database.ExecuteSqlRaw("dbo.FindName @paramID, @paramName OUT", ID, name);
-
-            Console.WriteLine($"Result: {name.Value}");
+            await testDB.Database.ExecuteSqlRawAsync("dbo.FindName @paramID, @paramName OUT", ID, name);
+            Console.WriteLine($"\nResult: {name.Value}");
         }
     }
 }
