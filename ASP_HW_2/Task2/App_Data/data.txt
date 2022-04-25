@@ -1,0 +1,6 @@
+﻿1, Mobile Phone, 600, Samsung S10, 12, tech
+2, Laptop, 3200, Dell Latitude E6540, 4, tech
+3, Keyboard, 35, HyperX Alloy Origins Core, 0, device
+4, Mouse, 10, Razer Naga X, 53, device
+5, Pen, 1, Flair Writometer, 4345, office
+6, Notebook, 1, Pimkie, 457, office

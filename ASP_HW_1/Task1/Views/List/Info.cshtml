@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Info</title>
+</head>
+<body>
+    @for (var i = 0; i < Model.Length; i++)
+    {
+        <ul>ID: @Model[i].Id Name: @Model[i].Name</ul>
+    }
+</body>
+</html>
